@@ -1,0 +1,5 @@
+# This plugin main ruin plugins that modifies the attack cooldown because of its algorithm.
+# So instead we provide an option for modifying it.
+#
+# Use a negative number for using vanilla cooldown.
+attack-cooldown: -1
