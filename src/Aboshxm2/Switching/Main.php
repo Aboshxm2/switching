@@ -33,7 +33,7 @@ class Main extends PluginBase implements Listener
             isset($this->entityTicks[$living->getId()]) &&
             ($ticks - $this->entityTicks[$living->getId()]) < $cooldown
         ) {
-            if($living->getLastDamageCause()->getBaseDamage() >= $event->getBaseDamage()) {                
+            if($living->getLastDamageCause() !== null && $living->getLastDamageCause()->getBaseDamage() >= $event->getBaseDamage()) {
                 $event->cancel();
             }
         }else {
