@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Aboshxm2\Switching;
 
 use pocketmine\entity\Living;
-use pocketmine\event\entity\EntityDamageByEntityEvent;
+use pocketmine\event\entity\EntityDamageEvent;
 use pocketmine\event\Listener;
 use pocketmine\plugin\PluginBase;
 
@@ -21,7 +21,7 @@ class Main extends PluginBase implements Listener
     /**
      * @priority HIGHEST
      */
-    public function onDamage(EntityDamageByEntityEvent $event): void
+    public function onDamage(EntityDamageEvent $event): void
     {
         $living = $event->getEntity();
         if(!$living instanceof Living) return;
